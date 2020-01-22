@@ -11,6 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,  MatNativeDateModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoMaterialModule } from './material-module';
+import { CoreRoutingModule } from './core-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DemoMaterialModule } from './material-module';
     FooterComponent
   ],
   imports: [
+    CoreRoutingModule,
     DemoMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,

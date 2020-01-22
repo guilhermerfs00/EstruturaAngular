@@ -9,11 +9,13 @@ import { CoreModule } from "./core/core.module";
 
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     ChartModule,
