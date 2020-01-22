@@ -8,9 +8,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
 
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
-
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,  MatNativeDateModule} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoMaterialModule } from './material-module';
 
 @NgModule({
   declarations: [
@@ -19,13 +19,17 @@ import { FormsModule } from '@angular/forms';
     FooterComponent
   ],
   imports: [
+    DemoMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   exports:[
     // shared modules

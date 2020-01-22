@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from "./core/core.module";
 
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatListModule, MatTreeModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -19,14 +18,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

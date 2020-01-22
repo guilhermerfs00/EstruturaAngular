@@ -1,5 +1,5 @@
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 /** @title Responsive sidenav */
 @Component({
@@ -7,32 +7,11 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
-  mobileQuery: MediaQueryList;
+export class AppComponent implements OnInit {
 
-  fillerNav = Array.from([
-    'aaaa', 'bbbbb', 'cccc'
-  ]);
-
-  private _mobileQueryListener: () => void;
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+  ngOnInit() {
   }
 
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
+  constructor() { }
 
-  teste(teste: number) {
-    console.log(teste);
-  }
-  shouldRun = true;
 }
-
-
-/**  Copyright 2019 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
